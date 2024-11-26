@@ -7,12 +7,15 @@ package DataAccess;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-
+/**
+ *
+ * @author NEISER
+ */
 public class Conexion {
-
-    private static String URI = "jdbc:mysql://localhost:3307/lab";
+    
+    private static String URI = "jdbc:mysql://127.0.0.1:3307/lab";
     private static String user = "root";
-    private static String pass = "root";
+    private static String pass = "admin";
 
     public static Connection getConnection() {
         try {
@@ -23,5 +26,4 @@ public class Conexion {
         }
         return null;
     }
-
 }

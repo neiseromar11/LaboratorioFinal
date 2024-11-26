@@ -4,10 +4,12 @@
  */
 package entidades;
 
-
+/**
+ *
+ * @author NEISER
+ */
 public class Persona {
-    
-    private int idPersona;
+       private int idPersona;
     private String nombre;
     private String apellido;
     private String dni;
@@ -62,5 +64,4 @@ public class Persona {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    
 }

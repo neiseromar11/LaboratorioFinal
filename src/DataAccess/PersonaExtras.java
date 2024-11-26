@@ -9,11 +9,13 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class PersonaExtras
-        extends Persona {
-
-    public String getTextoLista() {
+/**
+ *
+ * @author NEISER
+ */
+public class PersonaExtras  extends Persona{
+    
+     public String getTextoLista() {
         return "ID: " + getIdPersona() + "\t | Nombre: " + getNombre();
     }
 
@@ -42,5 +44,4 @@ public class PersonaExtras
         }
         return personas;
     }
-
 }
