@@ -16,7 +16,9 @@ import java.util.List;
 public class PersonaExtras  extends Persona{
     
      public String getTextoLista() {
-        return "ID: " + getIdPersona() + "\t | Nombre: " + getNombre();
+        return "ID: " + getIdPersona() + "\t | Nombre: " + getNombre()
+                + "\t | Apellido: " +getApellido()+ "\t | DNI: " 
+                + getDni()+ "\t |Edad : " + getEdad()+ "\t | Correo: " + getCorreo();
     }
 
     public PersonaExtras(ResultSet rs) {

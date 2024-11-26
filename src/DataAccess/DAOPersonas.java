@@ -9,6 +9,7 @@ import entidades.Persona;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -115,5 +116,17 @@ public class DAOPersonas {
         }
         return false;
     }
+    
+    public List<Persona> buscarPersonas(String criterio) {
+    try {
+        String query = "SELECT * FROM persona WHERE nombre LIKE '%" + criterio + "%' OR dni LIKE '%" + criterio + "%'";
+        ResultSet resultSet = statement.executeQuery(query);
+        return PersonaExtras.fromResultSet(resultSet);
+    } catch (Exception e) {
+        System.err.println(e.getMessage());
+        return new ArrayList<>();
+    }
+}
+
 
 }
